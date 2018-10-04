@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@colores.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutY="-6.0" prefHeight="600.0" prefWidth="960.0" stylesheets="@colores.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+         <children>
+            <MenuBar styleClass="menu" stylesheets="@colores.css">
+              <menus>
+                <Menu mnemonicParsing="false" onAction="#evtabrir" text="Archivo">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Abrir" />
+                        <MenuItem mnemonicParsing="false" text="Guardar" />
+                        <MenuItem mnemonicParsing="false" text="Guardar como" />
+                        <MenuItem mnemonicParsing="false" onAction="#evtsalir" text="Salir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Editar">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Copiar " />
+                    <MenuItem mnemonicParsing="false" text="Pegar" />
+                        <MenuItem mnemonicParsing="false" text="Seleccionar todo" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Ejecutar" />
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
