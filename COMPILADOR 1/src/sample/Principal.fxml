@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@colores.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@colores.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox layoutY="-6.0" prefHeight="600.0" prefWidth="960.0" stylesheets="@colores.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
          <children>
-            <MenuBar styleClass="menu" stylesheets="@colores.css">
+            <MenuBar prefHeight="35.0" prefWidth="960.0" styleClass="menu" stylesheets="@colores.css">
               <menus>
                 <Menu mnemonicParsing="false" onAction="#evtabrir" text="Archivo">
                   <items>
@@ -35,7 +40,37 @@
                   </items>
                 </Menu>
               </menus>
+               <VBox.margin>
+                  <Insets right="2.0" />
+               </VBox.margin>
             </MenuBar>
+            <TabPane prefHeight="575.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Archivo.abc">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="960.0">
+                           <children>
+                              <VBox prefHeight="541.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane fx:id="paneSote" prefHeight="401.0" prefWidth="960.0" />
+                                    <TextArea prefHeight="200.0" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Resultado">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
          </children>
       </VBox>
    </children>
