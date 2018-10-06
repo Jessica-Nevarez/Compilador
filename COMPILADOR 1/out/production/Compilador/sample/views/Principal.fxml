@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@colores.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@../colores.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Controller">
    <children>
-      <VBox layoutY="-6.0" prefHeight="600.0" prefWidth="960.0" stylesheets="@colores.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+      <VBox layoutY="-6.0" prefHeight="600.0" prefWidth="960.0" stylesheets="@../colores.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
          <children>
-            <MenuBar prefHeight="35.0" prefWidth="960.0" styleClass="menu" stylesheets="@colores.css">
+            <MenuBar prefHeight="35.0" prefWidth="960.0" styleClass="menu" stylesheets="@../colores.css">
               <menus>
                 <Menu mnemonicParsing="false" onAction="#evtabrir" text="Archivo">
                   <items>

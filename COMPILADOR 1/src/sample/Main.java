@@ -1,14 +1,12 @@
 package sample;
 
-import com.sun.javafx.applet.Splash;
 import com.sun.javafx.application.LauncherImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sun.dc.pr.PRError;
-import sun.misc.Launcher;
+import sample.controllers.splash;
 
 public class Main extends Application {
 public static int duracion=100000;
@@ -24,7 +22,7 @@ public  static int steps=1;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/Principal.fxml"));
         primaryStage.setTitle("COMPILADOR");
         primaryStage.setScene(new Scene(root, 960, 600));
         primaryStage.show();

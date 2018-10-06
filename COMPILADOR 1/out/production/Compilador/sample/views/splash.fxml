@@ -6,14 +6,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxWidth="532.0" prefHeight="443.0" prefWidth="532.0" style="-fx-background-color: #FFFFFF;" stylesheets="@colores.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.splash">
+<AnchorPane maxWidth="532.0" prefHeight="443.0" prefWidth="532.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../colores.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.splash">
    <children>
       <ImageView fitHeight="304.0" fitWidth="308.0" layoutX="120.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/logotipo.jpg" />
+            <Image url="@../../img/logotipo.jpg" />
          </image>
       </ImageView>
-      <ProgressBar fx:id="prog" layoutX="182.0" layoutY="268.0" prefHeight="4.0" prefWidth="177.0" progress="0.12" stylesheets="@colores.css" />
+      <ProgressBar fx:id="prog" layoutX="182.0" layoutY="268.0" prefHeight="4.0" prefWidth="177.0" progress="0.0" stylesheets="@../colores.css" />
       <Label fx:id="lblprog" layoutX="245.0" layoutY="286.0" text="0%" />
    </children>
 </AnchorPane>
