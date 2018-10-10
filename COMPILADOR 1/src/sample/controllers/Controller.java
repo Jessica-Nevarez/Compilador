@@ -3,7 +3,9 @@ package sample.controllers;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.fxmisc.richtext.CodeArea;
@@ -23,8 +25,9 @@ import static sample.Constans.configs.*;
 public class Controller extends Application {
     private Stage stage;
     @FXML
-    private Pane paneSote;
+    private HBox paneSote;
     CodeArea codeArea = new CodeArea();
+
     @FXML protected  void  initialize (){
         // add line numbers to the left of area
         codeArea.setParagraphGraphicFactory(LineNumberFactory.get(codeArea));
@@ -34,7 +37,13 @@ Subscription cleanupWhenNoLongerNeedIt= codeArea
         .multiPlainChanges()
         .successionEnds(Duration.ofMillis(500))
         .subscribe(ignore -> codeArea.setStyleSpans(0, computeHighlighting(codeArea.getText())));
-        paneSote.getChildren().add(codeArea);
+
+    //    paneSote.getChildren().add(codeArea);
+codeArea.replaceText(0,0,sampleCode);
+//codeArea.setPrefWidth(paneSote.getPrefWidth());
+//codeArea.setPrefHeight(paneSote.getPrefHeight());
+        HBox.setHgrow(codeArea, Priority.ALWAYS);
+     paneSote.getChildren().add(codeArea);
 
     }
     public void evtsalir (ActionEvent evt){

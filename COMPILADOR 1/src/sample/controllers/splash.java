@@ -48,8 +48,8 @@ if(info instanceof  PreloaderNotification){
             public void run() {
                 Parent root2;
                 try{
-                   root2= FXMLLoader.load(getClass().getResource("views/splash.fxml"));
-                   scene= new Scene(root2,600,600);
+                   root2= FXMLLoader.load(getClass().getResource("../views/splash.fxml"));
+                   scene= new Scene(root2,500,500);
                 }
                 catch (IOException e){
 e.printStackTrace();

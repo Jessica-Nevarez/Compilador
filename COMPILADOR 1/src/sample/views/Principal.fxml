@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@../colores.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Controller">
@@ -52,8 +52,8 @@
                            <children>
                               <VBox prefHeight="541.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Pane fx:id="paneSote" prefHeight="401.0" prefWidth="960.0" />
-                                    <TextArea prefHeight="200.0" prefWidth="200.0">
+                                    <HBox fx:id="paneSote" prefHeight="560.0" prefWidth="960.0" VBox.vgrow="ALWAYS" />
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                                        <VBox.margin>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </VBox.margin>
