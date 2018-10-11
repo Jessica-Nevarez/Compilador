@@ -3,6 +3,7 @@ package sample.controllers;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
@@ -13,6 +14,7 @@ import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
 import org.fxmisc.richtext.model.StyleSpansBuilder;
 import org.reactfx.Subscription;
+import sample.Constans.configs;
 
 import java.io.File;
 import java.time.Duration;
@@ -27,6 +29,7 @@ public class Controller extends Application {
     @FXML
     private HBox paneSote;
     CodeArea codeArea = new CodeArea();
+@FXML TextArea txtconsola;
 
     @FXML protected  void  initialize (){
         // add line numbers to the left of area
@@ -62,5 +65,25 @@ codeArea.replaceText(0,0,sampleCode);
         this.stage=stage;
 
     }
+public void ejecutar (ActionEvent event){
+compilar();
+}
+public  void compilar (){
+    txtconsola.setText("");
+    long tInicial=System.currentTimeMillis();
+    String texto =codeArea.getText();
+    String[]renglones =texto.split("\\n");
+    for(int x=0; x<renglones.length; x++) {
+        for(int y=0; y<configs.EXPRESIONES.length;y++){
+           Pattern patron =Pattern.compile(configs.EXPRESIONES[y]);
+            Matcher matcher=patron.matcher(renglones[x]);
+            if(!matcher.matches()){
+txtconsola.setText(txtconsola.getText()+"\n"+"Error de sintaxis en la linea "+ (x+1));
+            }
+        }
 
+    }
+    long tFinal=System.currentTimeMillis()-tInicial;
+    txtconsola.setText(txtconsola.getText()+"\n"+"Compilado en: "+tFinal+" milisegundos");
+}
 }

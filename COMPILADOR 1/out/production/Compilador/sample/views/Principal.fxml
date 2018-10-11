@@ -32,7 +32,10 @@
                         <MenuItem mnemonicParsing="false" text="Seleccionar todo" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="Ejecutar" />
+                  <Menu mnemonicParsing="false" onAction="#ejecutar" text="Ejecutar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ejecutar" text="Ejecutar" />
+                     </items></Menu>
                 <Menu mnemonicParsing="false" text="Ayuda">
                   <items>
                     <MenuItem mnemonicParsing="false" text="About" />
@@ -53,7 +56,7 @@
                               <VBox prefHeight="541.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <HBox fx:id="paneSote" prefHeight="560.0" prefWidth="960.0" VBox.vgrow="ALWAYS" />
-                                    <TextArea prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                    <TextArea fx:id="txtconsola" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                                        <VBox.margin>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </VBox.margin>

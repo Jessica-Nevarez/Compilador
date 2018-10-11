@@ -83,4 +83,7 @@ public final class configs {
         spansBuilder.add(Collections.emptyList(), text.length() - lastKwEnd);
         return spansBuilder.create();
     }
+    public static String [] EXPRESIONES ={
+            "[A-Z-z]{1,3}"
+    };
 }
