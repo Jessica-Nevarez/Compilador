@@ -73,12 +73,21 @@ public  void compilar (){
     long tInicial=System.currentTimeMillis();
     String texto =codeArea.getText();
     String[]renglones =texto.split("\\n");
+
+
     for(int x=0; x<renglones.length; x++) {
-        for(int y=0; y<configs.EXPRESIONES.length;y++){
-           Pattern patron =Pattern.compile(configs.EXPRESIONES[y]);
+        boolean bandera= false;
+        if(!renglones[x].trim().equals("")){
+            for(int y=0; y<configs.EXPRESIONES.length && bandera==false;y++){
+            Pattern patron =Pattern.compile(configs.EXPRESIONES[y]);
             Matcher matcher=patron.matcher(renglones[x]);
-            if(!matcher.matches()){
-txtconsola.setText(txtconsola.getText()+"\n"+"Error de sintaxis en la linea "+ (x+1));
+            if(matcher.matches()){
+                bandera=true;
+            }
+                //txtconsola.setText(txtconsola.getText()+"\n"+"Error de sintaxis en la linea "+ (x+1));
+            }
+            if(bandera==false){
+                txtconsola.setText(txtconsola.getText()+"\n"+"Error de sintaxis en la linea " + (x+1));
             }
         }
 

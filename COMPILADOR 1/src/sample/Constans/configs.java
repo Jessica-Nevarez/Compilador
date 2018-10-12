@@ -40,26 +40,7 @@ public final class configs {
     );
 
     public static final String sampleCode = String.join("\n", new String[] {
-            "package com.example;",
-            "",
-            "import java.util.*;",
-            "",
-            "public class Foo extends Bar implements Baz {",
-            "",
-            "    /*",
-            "     * multi-line comment",
-            "     */",
-            "    public static void main(String[] args) {",
-            "        // single-line comment",
-            "        for(String arg: args) {",
-            "            if(arg.length() != 0)",
-            "                System.out.println(arg);",
-            "            else",
-            "                System.err.println(\"Warning: empty string as argument\");",
-            "        }",
-            "    }",
-            "",
-            "}"
+            "Añadir rompecabezas"
     });
     public static StyleSpans<Collection<String>> computeHighlighting(String text) {
         Matcher matcher = PATTERN.matcher(text);
@@ -84,6 +65,6 @@ public final class configs {
         return spansBuilder.create();
     }
     public static String [] EXPRESIONES ={
-            "[A-Z-z]{1,3}"
+     "Crear\\s\\w+\\s \\d{2}"
     };
 }
