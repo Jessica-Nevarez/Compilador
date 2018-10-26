@@ -42,7 +42,7 @@ Subscription cleanupWhenNoLongerNeedIt= codeArea
         .subscribe(ignore -> codeArea.setStyleSpans(0, computeHighlighting(codeArea.getText())));
 
     //    paneSote.getChildren().add(codeArea);
-codeArea.replaceText(0,0,sampleCode);
+//codeArea.replaceText(0,0,sampleCode);
 //codeArea.setPrefWidth(paneSote.getPrefWidth());
 //codeArea.setPrefHeight(paneSote.getPrefHeight());
         HBox.setHgrow(codeArea, Priority.ALWAYS);

@@ -18,7 +18,7 @@ public final class configs {
     public static final  String UserName="";
     
     public static final String[] KEYWORDS = new String[] {
-          "Crear","Eliminar","Añadir","Seleccionar","Modificar","Mostrar"
+          "Crear","Eliminar","Agregar rompecabezas","Seleccionar","Modificar","Mostrar"
     };
 
     public static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
@@ -40,7 +40,11 @@ public final class configs {
     );
 
     public static final String sampleCode = String.join("\n", new String[] {
-            "Añadir rompecabezas"
+                    "Crear rompecabezas (10,15)\n" +
+                    "Mostrar rompecabezas.abc\n" +
+                    "Seleccionar (10)\n" +
+                    "Eliminar rompecabezas.abc\n" +
+                    "Agregar rompecabezas (rompecabezas.jpg)\n"
     });
     public static StyleSpans<Collection<String>> computeHighlighting(String text) {
         Matcher matcher = PATTERN.matcher(text);
@@ -65,6 +69,10 @@ public final class configs {
         return spansBuilder.create();
     }
     public static String [] EXPRESIONES ={
-     "Crear\\s\\w+\\s \\d{2}"
+     "Crear\\s[A-Za-z]+\\s([(]\\d+[,]\\d+[)])$",
+            "Mostrar\\s[A-Za-z]+([.]abc)$",
+            "Seleccionar\\s([(]\\d+[)])$",
+            "Eliminar\\s[A-Za-z]+([.]abc)$",
+            "Agregar rompecabezas\\s([(][A-Za-z]+[.]\\w+[)])$"
     };
 }
